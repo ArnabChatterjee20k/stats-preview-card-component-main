@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: whitesmoke;
+      font-family: Arial, Helvetica, sans-serif, cursive;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 400;
+      color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: hsl(0, 0%, 100%);
+    }
+
+    h1 span {
+      color: hsl(277, 64%, 61%);
+    }
+
+    h2 {
+      color: hsla(0, 0%, 100%, 0.6);
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      background-color: hsl(233, 47%, 7%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+      display: flex;
+      width: 80%;
+      height: 60%;
+      align-items: center;
+      justify-content: center;
+      background-color: hsl(244, 38%, 16%);
+      padding-left: 2rem;
+      border-radius: 1rem;
+    }
+
+    /* background-color: #f8ceec; */
+
+
+    .image {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#aa5cdb6e, #aa5cdb6e), url(images/image-header-desktop.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+
+    .text {
+      width: 100%;
+      /* padding: 2 rem; */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .text>* {
+      margin: 1rem;
+    }
+
+    .text p {
+      width: 70%;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 100%;
+      margin-top: 1rem;
+
+    }
+
+    .stats>* {
+      flex: 1;
+    }
+
+
+    /* for width less than 900 impose media query */
+    @media only screen and (max-width:1000px) {
+      .box {
+        position: relative;
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 70vw;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        min-height: 20%;
+        max-height: 30%;
+        background-position: center;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 0;
+      }
+
+      .text {
+        position: absolute;
+        top: 30%;
+        height: 70%;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        padding: 0.3rem;
+        text-align: center;
+      }
+
+      .text p {
+        text-align: center;
+        font-size: 10px;
+      }
+
+      .stats p {
+        font-size: 6px;
+        width: 100%;
+      }
+
+      .stats h2 {
+        font-size: 1.2rem;
+      }
+      .stats{
+        flex-direction: column;
+        padding: 0.2rem;
+      }
+      .data {
+        margin: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="text">
+      <!-- for the left side text -->
+      <h1>Get <span>insights</span> that help your business grow.</h1>
+      <p>
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and
+        overall efficiency.
+      </p>
+
+      <div class="stats">
+        <!-- contain the statistic -->
+        <div class="data">
+          <h2>10k+</h2>
+          <p>COMPANIES</p>
+        </div>
+        <div class="data">
+          <h2>314</h2>
+          <p>TEMPLATES</p>
+        </div>
+        <div class="data">
+          <h2>12M+</h2>
+          <p>QUERIES</p>
+        </div>
+      </div>
+    </div>
+    <div class="image">
+      <!-- for the right side image -->
+    </div>
+  </div>
+</body>
+
+</html>
